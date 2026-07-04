@@ -2,7 +2,7 @@
   /** Clase hija Pelicula */
 }
 
-import { Produccion } from "./produccion.js";
+import { Produccion } from "./Produccion.js";
 
 export class Pelicula extends Produccion {
   #director;
