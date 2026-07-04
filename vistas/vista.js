@@ -16,7 +16,7 @@ export class Vista {
     peliculas.forEach((pelicula) => {
       const poster = pelicula.poster_path
         ? `https://image.tmdb.org/t/p/w500${pelicula.poster_path}`
-        : "https://via.placeholder.com/500x750?text=Sin+Imagen";
+        : "https://via.placeholder.com/150x225";
 
       const card = document.createElement("div");
 
