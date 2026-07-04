@@ -45,12 +45,12 @@ export class Pelicula extends Produccion {
     }
 
     if (data.release_dates) {
-      const cetAR = data.release_dates.results.find(
+      const certificacionAR = data.release_dates.results.find(
         (pais) => pais.iso_3166_1 === "AR",
       );
       this.#clasificacionEdad =
-        cetAR && cetAR.release_dates[0].certification !== ""
-          ? certAR.release_dates[0].certification
+        certificacionAR && certificacionAR.release_dates[0].certification !== ""
+          ? certificacionAR.release_dates[0].certification
           : "S/C";
     } else {
       this.#clasificacionEdad = "S/C";
