@@ -3,7 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cine Catalogo</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Gran Cine</h1>
+      <nav id="contenedor-categorias"></nav>
+    </header>
+    <main id="vista-catalogo">
+      <h2 id="titulo-seccion">Populares</h2>
+      <div id="grid-peliculas" class="grid">
+        <p>Cargando películas...</p>
+      </div>
+    </main>
+
+    <section id="vista-detalle" class="oculto">
+      <button id="boton-volver" class="boton-volver">
+        ← Volver al catálogo
+      </button>
+      <div id="contenedor-detalle"></div>
+    </section>
+
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
