@@ -3,11 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cine Catalogo</title>
+    <title>¡PELI BOOM!</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #121212;
+        color: #e0e0e0;
+        margin: 0;
+        padding: 20px;
+      }
+      .oculto {
+        display: none !important;
+      }
+      contenedor-categorias {
+        margin-bottom: 20px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .boton-categoria {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      .boton-categoria:hover {
+        background: #bb86fc;
+        color: black;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+      }
+      .card {
+        cursor: pointer;
+        text-align: center;
+        background-color: #1e1e1e;
+        padding: 10px;
+        border-radius: 10px;
+        transition: transform 0.2s;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .card img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .boton-accion {
+        margin: 10px 5px 0 0;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .boton-volver {
+        background: transparent;
+        color: #03dac6;
+        border: 1px solid #03dac6;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Gran Cine</h1>
+      <h1
+        style="
+          color: #03dac6;
+          text-align: center;
+          border-bottom: 2px solid #03dac6;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+          font-weight: bold;
+        "
+      >
+        PELI BOOM
+      </h1>
       <nav id="contenedor-categorias"></nav>
     </header>
     <main id="vista-catalogo">
