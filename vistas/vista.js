@@ -23,7 +23,7 @@ export class Vista {
       card.className = "card";
       card.innerHTML = `
         <img src="${poster}" alt="${pelicula.title}" />
-        <p>${pelicula.title}</p>
+        <p style="margin-top: 10px; font-weight: bold;">${pelicula.title}</p>
       `;
       card.addEventListener("click", () => callbackClicPelicula(pelicula.id));
       grid.appendChild(card);
@@ -34,21 +34,22 @@ export class Vista {
     const contenedor = document.getElementById("contenedor-detalle");
 
     contenedor.innerHTML = `
-    <div>
-      <img src="${pelicula.posterUrl}" alt="${pelicula.titulo}" />
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; background: #1E1E1E; padding: 20px; border-radius: 10px;">
+      <img src="${pelicula.posterUrl}" style="width: 250px; border-radius: 10px;" alt="Poster" />
 
-      <div>
-        <h2>${pelicula.titulo}</h2>
-        <p><strong>Género:</strong> ${pelicula.generos} | <strong>Edad:</strong> ${pelicula.clasificacionEdad}</p>
+      <div style="flex: 1; min-width: 300px;">
+      <span style="background: red; color: white; padding: 2px 5px; border-radius: 3px; font-size: 12px;">${pelicula.obtenerTipo()}</span>
+        <h2 style="color: #BB86FC; margin-top: 10px;">${pelicula.titulo}</h2>
+        <p><strong>Géneros:</strong> ${pelicula.generos} | <strong>Edad:</strong> ${pelicula.clasificacionEdad}</p>
         <p><strong> Calificación:</strong> ${pelicula.clasificacion}</p>
         <p><strong>Director:</strong> ${pelicula.director}</p>
         <p><strong>Reparto:</strong> ${pelicula.reparto}</p>
         <p><em>${pelicula.resena}</em></p>
 
-        <div>
-          <button id="btn-vista" class="btn-accion"> Ya la vi</button>
-          <button id="btn-porver" class="btn-accion"> Ver más tarde</button>
-          <button id="btn-favorito" class="btn-accion"> Agregar a favoritos</button>
+        <div style="margin-top: 20px;">
+          <button id="btn-vista" class="btn-accion" style="background: #4CAF50; color: white; font-weight: bold;"> Ya la vi</button>
+          <button id="btn-porver" class="btn-accion" style="background: #2196F3; color: white; font-weight: bold;"> Ver más tarde</button>
+          <button id="btn-favorito" class="btn-accion" style="background: #FFC107; color: black; font-weight: bold;"> Agregar a favoritos</button>
         </div>
       </div>
     </div>
